@@ -108,18 +108,48 @@ const App: React.FC = () => {
                             className="hidden lg:block relative"
                         >
                             <div className="relative z-10 w-full aspect-square max-w-md mx-auto">
-                                <div className="absolute inset-0 bg-blue-600/20 blur-[100px] rounded-full animate-pulse" />
-                                <div className="w-full h-full bg-zinc-900/50 backdrop-blur-3xl border border-zinc-800 rounded-3xl flex items-center justify-center p-12 overflow-hidden">
-                                    <div className="relative w-full h-full">
-                                        <div className="absolute top-0 left-0 w-full font-mono text-[10px] text-blue-500/30 leading-relaxed">
-                                            {`const engineer = {\n  name: "Wang Yunshan",\n  role: "Architect",\n  stack: ["Vue3", "Cesium", "Node"],\n  passion: "Creative Coding"\n};`}
+                                {/* 背景光效 */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 blur-[100px] rounded-full animate-pulse" />
+
+                                {/* 主容器 */}
+                                <div className="w-full h-full bg-zinc-900/50 backdrop-blur-3xl border border-zinc-800 rounded-3xl flex items-center justify-center p-8 overflow-hidden">
+                                    {/* 代码展示区域 */}
+                                    <div className="relative w-full h-full flex flex-col justify-between p-6">
+                                        {/* 顶部代码块 */}
+                                        <pre className="font-mono text-[9px] text-blue-400/70 leading-relaxed select-none">
+                    <code>{`const engineer = {\n  name: "Wang Yunshan",\n  role: "Architect",\n  stack: ["Vue3", "Cesium", "Node"],\n  passion: "Creative Coding"\n};`}</code>
+                </pre>
+
+                                        {/* 中间装饰元素 */}
+                                        <div className="flex justify-center">
+                                            <div className="w-24 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
                                         </div>
-                                        <div className="absolute bottom-0 right-0 grid grid-cols-4 gap-4 opacity-20">
+
+                                        {/* 底部网格 */}
+                                        <div className="grid grid-cols-4 gap-3 opacity-40">
                                             {[...Array(12)].map((_, i) => (
-                                                <div key={i} className="w-8 h-8 bg-white rounded-sm" />
+                                                <motion.div
+                                                    key={i}
+                                                    initial={{ opacity: 0.3 }}
+                                                    animate={{
+                                                        opacity: [0.3, 0.8, 0.3],
+                                                        scale: [1, 1.1, 1]
+                                                    }}
+                                                    transition={{
+                                                        duration: 2,
+                                                        repeat: Infinity,
+                                                        delay: i * 0.2,
+                                                        ease: "easeInOut"
+                                                    }}
+                                                    className="w-6 h-6 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-sm border border-zinc-700"
+                                                />
                                             ))}
                                         </div>
                                     </div>
+
+                                    {/* 角落装饰 */}
+                                    <div className="absolute top-4 right-4 w-12 h-12 border border-blue-500/20 rounded-lg opacity-30" />
+                                    <div className="absolute bottom-4 left-4 w-8 h-8 border border-indigo-500/20 rounded-md opacity-30 rotate-45" />
                                 </div>
                             </div>
                         </motion.div>
