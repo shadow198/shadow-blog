@@ -3,11 +3,11 @@ import { Project, Experience, TechItem } from './types';
 
 export const TECH_STACK: TechItem[] = [
   { name: 'Vue 3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
-  { name: 'uniapp', icon: 'https://img.alicdn.com/tfs/TB19O79p9f2gK0jSZFHXXa9nFXa-200-200.png' }, // 占位图，建议替换为实际logo
+  { name: 'uniapp', icon: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/uni-app.png' },
   { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
   { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
   { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  { name: 'Cesium', icon: 'https://cesium.com/downloads/logos/cesium-learn-logo.svg' },
+  { name: 'Cesium', icon: 'https://raw.githubusercontent.com/CesiumGS/cesium/main/Apps/Sandcastle/images/cesium-logomark.svg' },
   { name: 'ECharts', icon: 'https://echarts.apache.org/zh/images/logo.png' },
   { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
 ];

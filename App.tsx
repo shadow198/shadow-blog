@@ -59,10 +59,10 @@ const App: React.FC = () => {
                             transition={{ duration: 0.8, ease: 'easeOut' }}
                         >
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                </span>
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                </span>
                                 正在寻求新的技术挑战
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-6 leading-[1.1]">
@@ -117,8 +117,8 @@ const App: React.FC = () => {
                                     <div className="relative w-full h-full flex flex-col justify-between p-6">
                                         {/* 顶部代码块 */}
                                         <pre className="font-mono text-[9px] text-blue-400/70 leading-relaxed select-none">
-                    <code>{`const engineer = {\n  name: "Wang Yunshan",\n  role: "Architect",\n  stack: ["Vue3", "Cesium", "Node"],\n  passion: "Creative Coding"\n};`}</code>
-                </pre>
+                                            <code>{`const engineer = {\n  name: "Wang Yunshan",\n  role: "Architect",\n  stack: ["Vue3", "Cesium", "Node"],\n  passion: "Creative Coding"\n};`}</code>
+                                        </pre>
 
                                         {/* 中间装饰元素 */}
                                         <div className="flex justify-center">
@@ -166,7 +166,7 @@ const App: React.FC = () => {
                                     <div className="w-12 h-12 flex items-center justify-center p-2 bg-zinc-900 rounded-xl border border-zinc-800 group-hover:border-blue-500/50 transition-all">
                                         <img src={tech.icon} alt={tech.name} className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110" />
                                     </div>
-                                    <span className="text-[10px] font-bold text-zinc-600 uppercase group-hover:text-zinc-300 transition-colors">{tech.name}</span>
+                                    <span className="text-[10px] font-bold text-white uppercase transition-colors">{tech.name}</span>
                                 </div>
                             ))}
                         </div>
